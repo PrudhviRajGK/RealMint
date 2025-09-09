@@ -1,0 +1,29 @@
+[package]
+name = "USDYTreasuryVault"
+version = "1.0.0"
+authors = []
+
+[addresses]
+# Resource address derived from
+# aptos account derive-resource-account-address --address 0x073a156d24490be574d40165ebf128bd334b1ec0ff0999ddcf31d2e5371ba911 --seed usdy_vault --seed-encoding utf8
+# aptos move create-resource-account-and-publish-package --address-name usdy_vault --seed usdy_vault --seed-encoding utf8 --included-artifacts none
+usdy_vault = "0xd868d3f4cc9a820d90ac836542ccfe666cb49562cd0a5b5ce7b4707f59040e5e"
+usdy_vault_deployer = "0x073a156d24490be574d40165ebf128bd334b1ec0ff0999ddcf31d2e5371ba911"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dependencies.FixedPoint64]
+git = "https://github.com/ThalaLabs/fixed_point64.git"
+rev = "testnet"
+
+[dependencies.ThalaProtocol]
+local = "../thala_protocol_interface"
+
+[dependencies.USDYCoin]
+local = "../coin_aliases/usdy_coin_alias"
+
+[dependencies.Lending]
+local = "../../echelon-modules/lending_core"
