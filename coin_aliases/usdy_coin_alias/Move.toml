@@ -1,0 +1,11 @@
+[package]
+name = "USDYCoin"
+version = "1.0.0"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/aptos-framework"
+rev = "mainnet"
+
+[addresses]
+usdy_alias = "0xb129c938e4d1a0c2ae6be6c4589dfcfaba6f87be41c6ef65a1b2f10fa36366ac"
